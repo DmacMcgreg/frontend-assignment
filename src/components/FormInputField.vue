@@ -3,7 +3,8 @@
     'FormInputField': !large,
     'FormInputField FormInputField--large': large
   }">
-    <input />
+    <input v-if="!large" />
+    <textarea v-if="large" />
   </div>
 </template>
 
@@ -20,7 +21,7 @@
 
    
 
-    input {
+    input, textarea {
         margin-top: 2px;
        width: 100%;
        height: 26px;
@@ -34,7 +35,7 @@
       max-height: 400px;
       height: 200px;
 
-      input {
+      input, textarea {
         height: 100%;
       }
       
