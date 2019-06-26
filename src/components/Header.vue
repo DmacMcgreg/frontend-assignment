@@ -11,7 +11,7 @@
       <span>
         OR
       </span>
-      <button class="Button--smartList">
+      <button class="Button--secondary">
         New Smartlist
       </button>
 
@@ -40,7 +40,7 @@
  @import '../styles/colors.scss';
 
 
-  .Button--smartList {
+  .Button--secondary {
     background: $lightBlueGrey;
     color: white;
 
