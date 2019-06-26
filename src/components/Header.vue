@@ -1,11 +1,11 @@
 <template>
   <div class="Header">
       <div class="HeaderLogo">
-        <img src="../zeplin-assets/company-data/logo-pink.png" />
+        <img src="../../zeplin-assets/company-data/logo-pink.png" />
       </div>
 
       <div class="InputField">
-          <img src="../zeplin-assets/company-data/search.png" />
+          <img src="../../zeplin-assets/company-data/search.png" />
           <input placeholder="Search Companies" />
       </div> 
       <span>
@@ -17,7 +17,7 @@
 
       <div v-for="(menu, index) in menus" :key="index">
           <span>{{ menu }}</span>
-          <img src="../zeplin-assets/company-data/arrow-down.png" />
+          <img src="../../zeplin-assets/company-data/arrow-down.png" />
       </div>
     </div>
 </template>

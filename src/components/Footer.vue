@@ -24,7 +24,7 @@
   export default {
     methods: {
       getImgUrl(pic) {
-        return require('../zeplin-assets/company-data/' + pic)
+        return require('../../zeplin-assets/company-data/' + pic)
       }
     },
     data() {
