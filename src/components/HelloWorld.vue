@@ -34,8 +34,10 @@
   @import '../styles/colors.scss';
 
   .Viewport {
+    width: 100vw;
+    min-width: 100vw;
     max-width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     overflow-x: hidden;
   }  
 </style>

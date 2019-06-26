@@ -1,15 +1,13 @@
 <template>
   <div class="MainPanel">
-    <SideBar />
-    <button @click="currentPage = currentPage === 'CompanyData' ? 'CompanyPage' : 'CompanyData'">Switch</button>
-    <component v-bind:is="currentPage" />
+    <SideBar @changePage="togglePage" v-bind:current-page="currentPage" />
+    <MainPanelContent :current-page="currentPage" />
   </div>
 </template>
 
 <script>
   import SideBar from './SideBar.vue'
-  import CompanyData from './CompanyData.vue'
-  import CompanyPage from './CompanyPage.vue'
+  import MainPanelContent from './MainPanelContent.vue'
 
   export default {
     data() {
@@ -24,17 +22,16 @@
     },
     components: {
       SideBar,
-      CompanyData,
-      CompanyPage
+      MainPanelContent,
     },
   }
 </script>
 
 <style lang="scss" scoped>
   .MainPanel {
-    padding: 8px 42px 24px 42px;
-    height: 100%;
-    width: 100%;
-    max-width: 100vw;
+    padding: 8px 150px 24px 150px;
+    height: calc(100vh - 251px);
+    display: flex;
+    flex-direction: row;
   }
 </style>
