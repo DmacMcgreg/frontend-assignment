@@ -2,7 +2,7 @@
   <div class="CompanyDataPage">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae facilisis erat, vehicula pharetra nisl. Vestibulum gravida sodales varius. Ut pulvinar lorem iaculis libero maximus suscipit. </p>
     <ul class="CompanyDataPage__errors" v-if="errors.length > 0">
-      <li v-for="(error, index) in errors" :key="error.index">
+      <li v-for="(error, index) in errors" :key="index">
         {{ error }}
       </li>
     </ul>
