@@ -3,14 +3,24 @@
     'FormInputField': !large,
     'FormInputField FormInputField--large': large
   }">
-    <input v-if="!large" />
-    <textarea v-if="large" />
+    <input :id="id" v-model="localValue" v-if="!large" />
+    <textarea :id="id" v-model="localValue" v-if="large" />
   </div>
 </template>
 
 <script>
   export default {
-    props: ['large']
+    props: ['large', 'id', 'model', 'value'],
+    computed: {
+      localValue: {
+        get () {
+          return this.value
+        },
+        set (value) {
+          this.$emit('input', value)
+        }
+      }
+    }
   }
 </script>
 
